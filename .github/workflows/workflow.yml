@@ -11,3 +11,9 @@ jobs:
       - name: print welcome message
         run:
           echo "Hello in learn github"
+
+      - name: check out repository
+        uses: actions/checkout@v5.0.0
+
+      - name: check files
+        run: ls -al1
