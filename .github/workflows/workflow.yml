@@ -1,0 +1,13 @@
+name: workflow.yml
+on:
+  push:
+    branches:
+      - main
+jobs:
+  example-iops:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: print welcome message
+        run:
+          echo "Hello in learn github"
