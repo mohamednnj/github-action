@@ -7,7 +7,7 @@ app.get('/', (req, res) => {
 });
 
 app.get('/about', (req, res) => {
-    res.send.json({test: 'test result a json format'});
+    res.json({test: 'test result a json format'});
 })
 
 app.listen(PORT, () => {
