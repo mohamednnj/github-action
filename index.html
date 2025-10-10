@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="ar">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Ebtikar — قريباً</title>
+<meta name="description" content="Ebtikar — Digital Transformation Experts. الموقع قادم قريباً." />
+
+<style>
+  :root{
+    --bg:#0b1d3a;    /* deep navy */
+    --accent:#00c8ff; /* electric cyan */
+    --card:#0f2746;
+    --glass: rgba(255,255,255,0.04);
+    --text:#e6f7ff;
+  }
+  *{box-sizing:border-box}
+  html,body{height:100%}
+  body{
+    margin:0;
+    font-family: "Tajawal", "Montserrat", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    background: linear-gradient(180deg,var(--bg) 0%, #071028 100%);
+    color:var(--text);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:24px;
+  }
+
+  .card{
+    width:100%;
+    max-width:980px;
+    background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.02));
+    border-radius:16px;
+    padding:36px;
+    box-shadow:0 8px 30px rgba(2,6,23,0.6);
+    display:flex;
+    gap:28px;
+    align-items:center;
+    justify-content:space-between;
+  }
+
+  .left{
+    flex:1 1 520px;
+    min-width:280px;
+  }
+  .logo{
+    display:flex;
+    align-items:center;
+    gap:12px;
+  }
+  .logo img{height:56px; width:auto;}
+  h1{
+    margin:14px 0 6px 0;
+    font-size:32px;
+    line-height:1.05;
+    letter-spacing:0.2px;
+  }
+  p.lead{
+    margin:0 0 18px 0;
+    color:rgba(230,247,255,0.85);
+  }
+
+  .countdown{
+    display:flex;
+    gap:12px;
+    margin-bottom:18px;
+    flex-wrap:wrap;
+  }
+  .timebox{
+    background:var(--glass);
+    padding:10px 14px;
+    border-radius:10px;
+    min-width:70px;
+    text-align:center;
+    backdrop-filter: blur(6px);
+  }
+  .timebox .num{font-size:20px; font-weight:700;}
+  .timebox .lbl{font-size:12px; opacity:0.8}
+
+  form.subscribe{
+    display:flex;
+    gap:8px;
+    max-width:480px;
+  }
+  input[type="email"]{
+    flex:1;
+    padding:10px 12px;
+    border-radius:10px;
+    border:1px solid rgba(255,255,255,0.06);
+    background:transparent;
+    color:var(--text);
+    outline:none;
+  }
+  button{
+    padding:10px 14px;
+    border-radius:10px;
+    border: none;
+    background:linear-gradient(90deg,var(--accent), #66f0ff);
+    color:#002;
+    font-weight:700;
+    cursor:pointer;
+  }
+
+  .right{
+    width:260px;
+    min-width:180px;
+    text-align:center;
+  }
+  .right img.illustr{
+    max-width:100%;
+    border-radius:10px;
+    box-shadow:0 6px 18px rgba(0,0,0,0.5);
+    display:block;
+    margin:0 auto 12px;
+  }
+  .socials{display:flex;gap:10px;justify-content:center;margin-top:8px}
+  .socials a{color:var(--text); text-decoration:none; font-size:14px; opacity:0.9}
+
+  @media(max-width:820px){
+    .card{flex-direction:column; padding:24px}
+    .right{width:100%}
+    h1{font-size:26px}
+  }
+</style>
+</head>
+<body>
+  <main class="card" role="main" aria-labelledby="title">
+    <section class="left">
+      <div class="logo" aria-hidden="true">
+        <!-- غيّر اسم الملف هنا -->
+        <img src="./logo.png" alt="Ebtikar logo">
+        <div style="font-size:14px; opacity:0.9">Ebtikar — ابتكار</div>
+      </div>
+
+      <h1 id="title">Ebtikar — الموقع قادم قريباً</h1>
+      <p class="lead">نحن بنبني حلول للتحول الرقمي، ERP، automation، وتصميم جرافيك. سجل إيميلك وهنبلغك أول ما نفتح.</p>
+
+      <div class="countdown" aria-live="polite" id="countdown">
+        <div class="timebox"><div class="num" id="days">--</div><div class="lbl">Days</div></div>
+        <div class="timebox"><div class="num" id="hours">--</div><div class="lbl">Hours</div></div>
+        <div class="timebox"><div class="num" id="minutes">--</div><div class="lbl">Minutes</div></div>
+        <div class="timebox"><div class="num" id="seconds">--</div><div class="lbl">Seconds</div></div>
+      </div>
+
+      <form class="subscribe" onsubmit="return handleSubscribe(event)">
+        <input type="email" id="email" placeholder="ادخل ايميلك" required aria-label="email">
+        <button type="submit">Notify me</button>
+      </form>
+
+      <div style="margin-top:12px; font-size:13px; opacity:0.85">
+        أو ابعتلنا على: <a href="mailto:contact@ebtikar.dev" style="color:var(--accent); text-decoration:none">contact@ebtikar.dev</a>
+      </div>
+    </section>
+
+    <aside class="right" aria-hidden="true">
+      <!-- اختياري: صورة توضيحية/illustration -->
+      <img class="illustr" src="https://images.unsplash.com/photo-1545235617-9465a2b7030c?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="illustration">
+      <div class="socials">
+        <a href="#" title="Twitter">Twitter</a>
+        <a href="#" title="LinkedIn">LinkedIn</a>
+        <a href="#" title="Instagram">Instagram</a>
+      </div>
+    </aside>
+  </main>
+
+<script>
+  // عدّل هنا لو عايز تاريخ آخر
+  const launchDate = new Date('2025-12-01T09:00:00Z').getTime();
+
+  function updateTimer(){
+    const now = Date.now();
+    const diff = launchDate - now;
+    if(diff <= 0){
+      document.getElementById('days').textContent = '0';
+      document.getElementById('hours').textContent = '0';
+      document.getElementById('minutes').textContent = '0';
+      document.getElementById('seconds').textContent = '0';
+      return;
+    }
+    const sec = Math.floor(diff/1000);
+    const days = Math.floor(sec / (3600*24));
+    const hours = Math.floor((sec % (3600*24)) / 3600);
+    const minutes = Math.floor((sec % 3600) / 60);
+    const seconds = sec % 60;
+
+    document.getElementById('days').textContent = days;
+    document.getElementById('hours').textContent = String(hours).padStart(2,'0');
+    document.getElementById('minutes').textContent = String(minutes).padStart(2,'0');
+    document.getElementById('seconds').textContent = String(seconds).padStart(2,'0');
+  }
+  updateTimer();
+  setInterval(updateTimer, 1000);
+
+  function handleSubscribe(e){
+    e.preventDefault();
+    const email = document.getElementById('email').value.trim();
+    if(!email) return;
+    // حل بدائي: فتح mailto مع محتوى جاهز
+    const subject = encodeURIComponent('Notify me - Ebtikar');
+    const body = encodeURIComponent('Please notify me when Ebtikar launches. My email: ' + email);
+    location.href = `mailto:contact
+    @ebtikar.dev?subject=${subject}&body=${body}`;
+    // لاحقًا: ترسلوا للباك-إند أو خدمة مثل Mailchimp / SendGrid API
+    return false;
+  }
+</script>
+</body>
+</html>
