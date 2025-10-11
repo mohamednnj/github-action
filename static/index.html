@@ -199,8 +199,7 @@
     // حل بدائي: فتح mailto مع محتوى جاهز
     const subject = encodeURIComponent('Notify me - Ebtikar');
     const body = encodeURIComponent('Please notify me when Ebtikar launches. My email: ' + email);
-    location.href = `mailto:contact
-    @ebtikar.dev?subject=${subject}&body=${body}`;
+    location.href = `mailto:contact@ebtikar.dev?subject=${subject}&body=${body}`;
     // لاحقًا: ترسلوا للباك-إند أو خدمة مثل Mailchimp / SendGrid API
     return false;
   }
